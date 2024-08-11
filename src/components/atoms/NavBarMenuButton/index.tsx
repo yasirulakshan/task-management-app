@@ -12,9 +12,10 @@ const NavBarMenuButton: React.FC = () => {
         color: "text.primary",
         borderColor: "whiteBg.500",
         boxShadow: "0px 0px 8px #d9d9d9, -20px -20px 60px #ffffff",
+        ml: 5,
       }}
     >
-      <MenuIcon />
+      <MenuIcon sx={{ pl: 1 }} />
       <Box
         sx={{
           display: "flex",

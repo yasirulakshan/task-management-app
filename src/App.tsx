@@ -1,7 +1,7 @@
 import React from "react";
 import AppRouter from "./router";
 import NavBar from "./components/organism/NavBar";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import SideBar from "./components/organism/SideBar";
 
 const App: React.FC = () => {
@@ -9,9 +9,9 @@ const App: React.FC = () => {
     <Box>
       <NavBar />
       <SideBar />
-      <Container maxWidth="xl">
+      <Box sx={{ ml: "260px", mt: "10px" }}>
         <AppRouter />
-      </Container>
+      </Box>
     </Box>
   );
 };
