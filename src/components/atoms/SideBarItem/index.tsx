@@ -5,7 +5,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface ISideBarItemProps {
@@ -16,16 +16,29 @@ interface ISideBarItemProps {
 
 const SideBarItem: React.FC<ISideBarItemProps> = ({ text, icon, route }) => {
   const navigate = useNavigate();
+  const [isActive, setIsActive] = React.useState(false);
 
   const handleNavigation = () => {
-    console.log(route);
-    navigate(route); // Replace 'route' with your actual route
+    navigate(route);
   };
+
+  useEffect(() => {
+    if (window.location.pathname === route) {
+      setIsActive(true);
+      console.log("route", route);
+    } else {
+      setIsActive(false);
+      console.log("Is active false");
+    }
+  }, [route]);
 
   return (
     <ListItem>
       <ListItemButton
-        sx={{ bgcolor: "whiteBg.500", borderRadius: "8px" }}
+        sx={{
+          bgcolor: isActive ? "primary.main" : "whiteBg.500",
+          borderRadius: "8px",
+        }}
         onClick={handleNavigation}
       >
         <ListItemIcon sx={{ color: "dark.400", minWidth: 48 }}>

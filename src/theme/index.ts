@@ -1,6 +1,5 @@
 import { createTheme, PaletteOptions } from "@mui/material/styles";
 
-// Extend the PaletteOptions type to include whiteBg
 interface CustomPaletteOptions extends PaletteOptions {
   whiteBg?: {
     500: string;
@@ -43,7 +42,6 @@ const theme = createTheme({
     },
     success: {
       main: "#2A7E2E",
-      500: "#2A7E2E",
       50: "#F4F8F4",
     },
     info: {
