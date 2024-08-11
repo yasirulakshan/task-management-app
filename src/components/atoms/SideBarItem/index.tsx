@@ -41,11 +41,17 @@ const SideBarItem: React.FC<ISideBarItemProps> = ({ text, icon, route }) => {
         }}
         onClick={handleNavigation}
       >
-        <ListItemIcon sx={{ color: "dark.400", minWidth: 48 }}>
+        <ListItemIcon
+          sx={{ color: isActive ? "white" : "dark.400", minWidth: 48 }}
+        >
           {icon}
         </ListItemIcon>
         <ListItemText>
-          <Typography fontSize={16} fontWeight={600} color="dark.400">
+          <Typography
+            fontSize={16}
+            fontWeight={600}
+            color={isActive ? "white" : "dark.400"}
+          >
             {text}
           </Typography>
         </ListItemText>
