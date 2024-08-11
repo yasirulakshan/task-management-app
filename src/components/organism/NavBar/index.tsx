@@ -3,12 +3,20 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import { InputAdornment, TextField } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import NavBarMenuButton from "../../atoms/NavBarMenuButton";
+import { SearchNormal1 } from "iconsax-react";
 
 const NavBar: React.FC = () => {
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
+    <AppBar
+      position="sticky"
+      sx={{
+        backgroundColor: "white",
+        boxShadow: "none",
+        borderBottom: 1,
+        borderColor: "divider",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
@@ -17,6 +25,7 @@ const NavBar: React.FC = () => {
             alignItems: "center",
             justifyContent: "space-between",
             height: "72px",
+            ml: "240px",
           }}
         >
           <TextField
@@ -24,7 +33,7 @@ const NavBar: React.FC = () => {
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
-                  <SearchIcon />
+                  <SearchNormal1 size="26" />
                 </InputAdornment>
               ),
             }}
