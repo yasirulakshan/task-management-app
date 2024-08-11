@@ -27,7 +27,8 @@ const NavBar: React.FC = () => {
             }}
             variant="outlined"
             size="small"
-            sx={{ width: "30%" }}
+            sx={{ minWidth: "300px", width: "40%" }}
+            placeholder="Search Tasks"
           />
         </Toolbar>
       </Container>
