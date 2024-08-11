@@ -4,7 +4,9 @@ import React from "react";
 const Home: React.FC = () => {
   return (
     <div>
-      <Typography variant="h1">Home</Typography>
+      <Typography variant="h1" color="primary">
+        Home
+      </Typography>
     </div>
   );
 };

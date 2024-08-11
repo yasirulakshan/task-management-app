@@ -7,7 +7,6 @@ interface CustomPaletteOptions extends PaletteOptions {
   };
 }
 
-// Create the theme using the extended type
 const theme = createTheme({
   palette: {
     primary: {
@@ -69,7 +68,35 @@ const theme = createTheme({
       100: "#C8C8C8",
       50: "#EFEFEF",
     },
-  } as CustomPaletteOptions, // Cast to the extended type
+  } as CustomPaletteOptions,
+
+  typography: {
+    fontFamily: "Roboto, sans-serif",
+    h1: {
+      fontSize: "2.5rem",
+      fontWeight: 700,
+    },
+    h2: {
+      fontSize: "2rem",
+      fontWeight: 700,
+    },
+    h3: {
+      fontSize: "1.75rem",
+      fontWeight: 700,
+    },
+    h4: {
+      fontSize: "1.5rem",
+      fontWeight: 700,
+    },
+    h5: {
+      fontSize: "1.25rem",
+      fontWeight: 700,
+    },
+    h6: {
+      fontSize: "1rem",
+      fontWeight: 700,
+    },
+  },
 });
 
 export default theme;
