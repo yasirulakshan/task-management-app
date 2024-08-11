@@ -16,7 +16,6 @@ const theme = createTheme({
       800: "#012359",
       700: "#013586",
       600: "#0247B3",
-      500: "#0359E0",
       400: "#3278E5",
       300: "#6298EB",
       200: "#92B7F1",
@@ -24,12 +23,11 @@ const theme = createTheme({
       50: "#F2F6FD",
     },
     secondary: {
-      main: "#029FB3",
+      main: "#03C7E0",
       900: "#00272C",
       800: "#014F59",
       700: "#017786",
       600: "#029FB3",
-      500: "#03C7E0",
       400: "#32D1E5",
       300: "#62DCEB",
       200: "#92E6F1",
@@ -37,19 +35,20 @@ const theme = createTheme({
       50: "#F2FCFD",
     },
     warning: {
-      500: "#FFAD0D",
+      main: "#FFAD0D",
       50: "#FFFAF2",
     },
     error: {
-      500: "#CB2E27",
+      main: "#CB2E27",
       50: "#FCF4F4",
     },
     success: {
+      main: "#2A7E2E",
       500: "#2A7E2E",
       50: "#F4F8F4",
     },
     info: {
-      500: "#0C6FBF",
+      main: "#0C6FBF",
       50: "#F2F7FB",
     },
     text: {
@@ -57,6 +56,18 @@ const theme = createTheme({
     },
     whiteBg: {
       500: "#F6F6F6",
+    },
+    dark: {
+      900: "#050505",
+      800: "#0B0B0B",
+      700: "#101010",
+      600: "#161616",
+      500: "#1C1C1C",
+      400: "#474747",
+      300: "#727272",
+      200: "#9D9D9D",
+      100: "#C8C8C8",
+      50: "#EFEFEF",
     },
   } as CustomPaletteOptions, // Cast to the extended type
 });
