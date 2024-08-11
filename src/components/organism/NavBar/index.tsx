@@ -2,7 +2,7 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
-import { InputAdornment, TextField } from "@mui/material";
+import { Button, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 const NavBar: React.FC = () => {
@@ -14,6 +14,7 @@ const NavBar: React.FC = () => {
           sx={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
           <TextField
@@ -30,6 +31,18 @@ const NavBar: React.FC = () => {
             sx={{ minWidth: "300px", width: "40%" }}
             placeholder="Search Tasks"
           />
+          <Button
+            variant="outlined"
+            sx={{
+              borderRadius: "100px",
+              height: "40px",
+              color: "text.primary",
+              borderColor: "whiteBg.500",
+              boxShadow: "0px 0px 8px #d9d9d9, -20px -20px 60px #ffffff",
+            }}
+          >
+            Add Task
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
