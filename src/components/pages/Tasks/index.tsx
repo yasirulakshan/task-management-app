@@ -1,14 +1,14 @@
 import { Typography } from "@mui/material";
 import React from "react";
 
-const Home: React.FC = () => {
+const Tasks: React.FC = () => {
   return (
     <div>
       <Typography variant="h1" color="primary">
-        Home
+        Tasks
       </Typography>
     </div>
   );
 };
 
-export default Home;
+export default Tasks;

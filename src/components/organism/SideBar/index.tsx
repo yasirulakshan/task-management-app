@@ -1,6 +1,13 @@
 import { Drawer, Divider, List, Box, Typography } from "@mui/material";
 import SideBarItem from "../../atoms/SideBarItem";
-import { Home2 } from "iconsax-react";
+import {
+  Diagram,
+  Home2,
+  LampCharge,
+  NotificationBing,
+  Setting2,
+  TaskSquare,
+} from "iconsax-react";
 import { ROUTES } from "../../../constants/routeConstants";
 
 const SideBar: React.FC = () => {
@@ -37,6 +44,31 @@ const SideBar: React.FC = () => {
           text="Home"
           icon={<Home2 size="32" />}
           route={ROUTES.HOME}
+        />
+        <SideBarItem
+          text="Tasks"
+          icon={<TaskSquare size="32" />}
+          route={ROUTES.TASKS}
+        />
+        <SideBarItem
+          text="Report"
+          icon={<Diagram size="32" />}
+          route={ROUTES.REPORT}
+        />
+        <SideBarItem
+          text="Insights"
+          icon={<LampCharge size="32" />}
+          route={ROUTES.INSIGHTS}
+        />
+        <SideBarItem
+          text="Inbox"
+          icon={<NotificationBing size="32" />}
+          route={ROUTES.INBOX}
+        />
+        <SideBarItem
+          text="Settings"
+          icon={<Setting2 size="32" />}
+          route={ROUTES.SETTINGS}
         />
       </List>
     </Drawer>

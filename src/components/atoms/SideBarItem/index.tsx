@@ -17,6 +17,7 @@ interface ISideBarItemProps {
 const SideBarItem: React.FC<ISideBarItemProps> = ({ text, icon, route }) => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = React.useState(false);
+  const location = window.location.pathname;
 
   const handleNavigation = () => {
     navigate(route);
@@ -25,12 +26,10 @@ const SideBarItem: React.FC<ISideBarItemProps> = ({ text, icon, route }) => {
   useEffect(() => {
     if (window.location.pathname === route) {
       setIsActive(true);
-      console.log("route", route);
     } else {
       setIsActive(false);
-      console.log("Is active false");
     }
-  }, [route]);
+  }, [location, route]);
 
   return (
     <ListItem>
