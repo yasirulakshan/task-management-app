@@ -1,15 +1,6 @@
-import {
-  Drawer,
-  Divider,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Box,
-} from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { Drawer, Divider, List, Box, Typography } from "@mui/material";
+import SideBarItem from "../../atoms/SideBarItem";
+import { Home2 } from "iconsax-react";
 
 const SideBar: React.FC = () => {
   return (
@@ -25,32 +16,23 @@ const SideBar: React.FC = () => {
       variant="permanent"
       anchor="left"
     >
-      <Box sx={{ height: "72px" }}></Box>
+      <Box
+        sx={{
+          height: "72px",
+          display: "flex",
+          alignItems: "center",
+          ml: 2,
+          width: "240px",
+        }}
+      >
+        <img src="/logo.png" alt="logo" width={40} />
+        <Typography variant="h5" sx={{ ml: 1 }}>
+          Code94 Labs
+        </Typography>
+      </Box>
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <SideBarItem text="Home" icon={<Home2 size="32" />} />
       </List>
     </Drawer>
   );
