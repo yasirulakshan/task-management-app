@@ -1,6 +1,7 @@
 import { Drawer, Divider, List, Box, Typography } from "@mui/material";
 import SideBarItem from "../../atoms/SideBarItem";
 import { Home2 } from "iconsax-react";
+import { ROUTES } from "../../../constants/routeConstants";
 
 const SideBar: React.FC = () => {
   return (
@@ -32,7 +33,11 @@ const SideBar: React.FC = () => {
       </Box>
       <Divider />
       <List>
-        <SideBarItem text="Home" icon={<Home2 size="32" />} />
+        <SideBarItem
+          text="Home"
+          icon={<Home2 size="32" />}
+          route={ROUTES.HOME}
+        />
       </List>
     </Drawer>
   );
