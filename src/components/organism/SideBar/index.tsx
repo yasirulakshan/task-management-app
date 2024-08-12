@@ -30,7 +30,6 @@ const SideBar: React.FC = () => {
           display: "flex",
           alignItems: "center",
           ml: 2,
-          width: "240px",
         }}
       >
         <img src="/logo.png" alt="logo" width={40} />
