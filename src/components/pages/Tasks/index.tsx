@@ -1,6 +1,8 @@
 import { Box, Card, Typography } from "@mui/material";
 import React from "react";
 import Circle from "../../atoms/Circle";
+import Count from "../../atoms/Count";
+import { Add } from "iconsax-react";
 
 const Tasks: React.FC = () => {
   return (
@@ -31,6 +33,8 @@ const Tasks: React.FC = () => {
           <Typography fontSize={20} fontWeight={600} sx={{ ml: 1 }}>
             Todo
           </Typography>
+          <Count count={5} />
+          <Add size="32" style={{ marginLeft: "auto" }} />
         </Box>
       </Card>
     </Box>
